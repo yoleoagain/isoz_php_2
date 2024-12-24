@@ -1,21 +1,28 @@
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <img src="https://github.com/ishaqadhel/docker-laravel-mysql-nginx-starter/assets/49280352/cb88bac9-2517-41fe-805e-b81423e64eca" alt="cover" align="center">
-  <h3 align="center">Docker Laravel MySQL Nginx Starter</h3>
-  <p align="center">
-    Project Starter For Web Application Development with Laravel, MySQL, Nginx, and Docker.
-    <br />
-  </p>
-</div>
+## Установка
+[Windows установка make](https://github.com/yoleoagain/isoz_php_2.git)
+Мой вариант:
+powershell из под админа
 
-<div align="center">
+```
+winget install ezwinports.make
+``` 
+Из [git bash](https://git-scm.com/downloads)
+```
+make run-app-with-setup-db
+```
 
-  <a href="">[![Contributors][contributors-shield]][contributors-url]</a>
-  <a href="">[![Stargazers][stars-shield]][stars-url]</a>
-  <a href="">[![Issues][issues-shield]][issues-url]</a>
+```
+docker exec -ti php sh
+```
+```
+composer install && npm install && chmod -R 777 storage && php artisan key:generate && php artisan migrate:fresh --seed
+<!-- Inside cotainer -->
+docker exec -ti php sh
+```
 
-</div>
+Перейти на локальный сайт
+[http://localhost:8001](http://localhost:8001)
+
 
 <!-- ABOUT THE PROJECT -->
 ## Features
